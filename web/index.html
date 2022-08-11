@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=0.2, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+    <meta name="keywords" content="习惯科技">
+    <meta name="description" content="习惯科技">
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon"/>
+    <title>习惯科技</title>
+
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet" >
+    <script  src="./js/jquery-1.11.2.min.js"></script>
+
+    <script src="js/axios.min.js"></script>
+    <!-- 列表api -->
+    <script  src="js/DetailAPI-1.0.2.js"></script>
+
+    <script  src="js/Common-1.0.2.js"></script>
+    <script  src="js/DetailControl-1.0.2.js"></script>
+
+
+    <script  src="./js/jquery.SuperSlide.2.1.1.js"></script>
+    <script  src="./js/ban.js"></script>
+    <script  src="./js/tab.js"></script>
+
+</head>
+
+<body>
+<!-- header -->
+<div class="headDiv">
+    <div class="wal2">
+        <a href="javascript:void(0)" class="logo"><img src="./images/logo.png"></a>
+        <div class="viccttor">
+            <div id="menu2" class="menu">
+                <ul>
+                    <li>
+                        <a class="vic1" href="javascript:void(0)">
+                            <span class="out">首页</span><span class="over"></span></a>
+                    </li>
+                    <li>
+                        <a class="vic1" href="#"><span class="out">走进习惯</span><span class="over"></span></a>
+                        <div class="hide1 h1">
+                            <ul>
+                                <li><a href="introduce.html">企业介绍</a></li>
+                                <li><a href="culture.html">企业文化</a></li>
+                                <li><a href="speach.html">董事长致辞</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="vic1" href="#"><span class="out">习惯新闻</span><span class="over"></span></a>
+                        <div class="hide1 h2">
+                            <ul>
+                                <li><a href="newslist.html">习惯新闻</a></li>
+                                <li><a href="noticelist.html">公示公告</a></li>
+                                <div class="clear"></div>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a class="vic1" href="contact.html"><span class="out">联系我们</span><span class="over"></span></a>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="cls"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 翻页大图 -->
+<div class="main1">
+    <div class="banner">
+        <div class="focus">
+            <ul class="rslides f426x240 rslides1" id="rs1" style="max-width: 1920px;">
+                <li id="rslides1_s0" class="" style="float: none; position: absolute; display: none;"><a href="#"><img
+                        src="./images/banner10.jpg" width="100%"></a></li>
+                <li id="rslides1_s1" class="" style="float: none; position: absolute; display: none;"><a href="#"><img
+                        src="./images/banner11.jpg" width="100%"></a></li>
+                <li id="rslides1_s2" class="" style="float: none; position: absolute; display: none;"><a href="#"><img
+                        src="./images/banner12.jpg" width="100%"></a></li>
+            </ul>
+            <a href="#" class="rslides_nav rslides1_nav prev">Previous</a>
+            <a href="#" class="rslides_nav rslides1_nav next">Next</a>
+           
+        </div>
+        <div class="bot_ko"><img src="./images/bgJt.png"></div>
+    </div>
+</div>
+
+<!-- 资讯中心 -->
+<div class="main3">
+    <div class="wal2">
+        <div class="title">资讯中心</div>
+        <div class="titleLine"></div>
+        <div class="title2">NEWS CENTER</div>
+        <div class="tabContentDiv">
+            <div class="tabContent" style="display: block;">
+                <div class="indexNewsPic fl">
+                    <div class="list">
+                        <ul class="tabcontenthd" style="position: relative; width: 370px; height: 399px;"></ul>
+                    </div>
+                    <div class="btnDiv">
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class=""></span>
+                        <span class="on"></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="indexNews fl">
+                    <div class="list" id='app'>
+                        <ul class="tabcontenthdlist">
+                        </ul>
+                    </div>
+                </div>
+                <span class="clear_f"></span>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+<!-- 关于习惯 -->
+<div class="main4">
+    <div class="wal2">
+        <div class="title">关于习惯</div>
+        <div class="titleLine"></div>
+        <div class="title2">ABOUT US</div>
+        <div class="m4_1">
+            <div class="m4_1_1">
+                <div class="m4_1_a">
+                    <h3>企业介绍</h3>
+                </div>
+                <div class="m4_1_b">
+                    <h3>高密习惯科技发展有限公司</h3>
+                    <p>
+                        高密习惯科技发展有限公司是由高密市人民政府批准设立的一家集融资担保、基金运营、资产处置、产业投资、基础设施建设、地产开发及财政经济服务于一体的大型综合性国有企业。高密习惯科技发展有限公司整合了高密市国有资产管理有限公司、高密市国有资产经营投资有限公司等十几家国有企业，</p>
+                </div>
+                <div class="m4_1_c">
+                    <a href="introduce.html">了解更多&gt;&gt;</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- 综合服务信息 -->
+<span class="clear_f"></span>
+<div class="indexPart5Box">
+    <div class="wal2">
+        <div class="title">综合服务</div>
+        <div class="titleLine"></div>
+        <div class="title2">COMPREHENSIVE SERVICE</div>
+        <div class="indexResource">
+            <div class="indexTypes">
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="title k4">
+                                <img src="./images/ffpq_01.jpg" alt="">
+                            </div>
+                            <div class="con fl" id="con11">
+                                <img src="./images/1.jpg" alt="">
+
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="title k5">
+                                <img src="./images/ffpq_02.jpg" alt="">
+                            </div>
+                            <div class="con fl" id="con22">
+                                <img src="./images/2.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0)">
+                            <div class="title sy_vic k3">
+                                <img src="./images/ffpq_03.jpg" alt="">
+                            </div>
+                            <div class="con fl" id="con33">
+                                <img src="./images/3.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li style="width: 833px;">
+                        <a href="javascript:void(0)">
+                            <div class="title sy_vic k3">
+                                <img src="./images/smcy.jpg" alt="">
+                            </div>
+                            <div class="con fl" id="con33">
+                                <img src="./images/4.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="current">
+                        <a href="javascript:void(0)">
+                            <div class="title sy_vic k3">
+                                <img src="./images/ffpq_05.jpg" alt="">
+                            </div>
+                            <div class="con fl" id="con33">
+                                <img src="./images/5.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="current">
+                        <a href="javascript:void(0)">
+                            <div class="title sy_vic k3">
+                                <img src="./images/ffpq_06.jpg" alt="">
+                            </div>
+                            <div class="con fl" id="con33">
+                                <img src="./images/6.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="current">
+                        <a href="javascript:void(0)">
+                            <div class="title sy_vic k3">
+                                <img src="./images/ffpq_07.jpg" alt="">
+                            </div>
+                            <div class="con fl" id="con33">
+                                <img src="./images/7.jpg" alt="">
+                            </div>
+                        </a>
+                    </li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+
+        </div>
+        <div class="h10"></div>
+    </div>
+</div>
+
+<!-- tail信息 -->
+<div class="main5_bor"></div>
+<div class="main5">
+    <div class="footDiv">
+        <div class="wal2">
+            <div class="fl footWx">
+                <img src="./images/ft_logo.png" alt="">
+            </div>
+            <div class="fr footNav">
+                <ul>
+                    <li>
+                        <h5><a href="javascript:void(0)">首页</a></h5>
+                        <div class="content">
+                        </div>
+                    </li>
+                    <li>
+                        <h5><a href="javascript:void(0)">走进习惯</a></h5>
+                        <div class="content">
+                            <dl>
+                                <dl>
+                                    <dd><a href="introduce.html">企业介绍</a></dd>
+                                    <dd><a href="culture.html">企业文化</a></dd>
+                                    <dd><a href="speach.html">董事长致辞</a></dd>
+                                </dl>
+                            </dl>
+                        </div>
+                    </li>
+                    <li>
+                        <h5><a href="javascript:void(0)">新闻资讯</a></h5>
+                        <div class="content">
+                            <dl>
+                                <dd><a href="#">习惯新闻</a></dd>
+                                <dd><a href="#">公示公告</a></dd>
+
+                            </dl>
+                        </div>
+                    </li>
+
+                    <li>
+                        <h5><a href="javascript:void(0)">联系我们</a></h5>
+                        <div class="content">
+                            <dl>
+                                <dd><a href="contact.html">联系方式</a></dd>
+                            </dl>
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<!-- 技术支持信息 -->
+<div class="fft_gs">
+    <div class="wal2">
+        <div class="ft_bq fl">
+            <p>高密习惯科技发展有限公司 版权所有 Copyright © 2020-2023 Gaomi Huarong Industrial Development Co., LTD </p>
+        </div>
+
+        <div class="ft_yu fr">
+            <p>
+                <a href="javascript:void(0)" target="_blank">鲁ICP备2020037415号</a> 技术支持：
+                <a href="javascript:void(0)" target="_blank">xx有限公司</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>
+    queryimgdata();
+    //列表
+    searchItemNews_Action();
+</script>
+
+</body>
+</html>

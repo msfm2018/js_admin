@@ -1,0 +1,2 @@
+
+var curpage=1;

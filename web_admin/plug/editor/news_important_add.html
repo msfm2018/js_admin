@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>内容编辑</title>
+
+
+        <!--只刷新不跳转 -->
+<!--        <meta http-equiv="refresh" content="5">-->
+        <!--定时跳转 -->
+<!--        <meta http-equiv="refresh" content="5;url=index.html">-->
+
+
+
+
+    <script  src="../../scripts/jquery/jquery-1.7.1.js"></script>
+
+	<script  src="../../scripts/authority/commonAll.js"></script>
+	<script  src="../../scripts/fancybox/jquery.fancybox-1.3.4.js"></script>
+	<script  src="../../scripts/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+
+	<script  src="../../scripts/artDialog/artDialog.js?skin=default"></script>
+
+	<!-- 数据查询js -->
+	<script  src="../queryjs/js/axios.min.js"></script>
+	<script  src="../queryjs/js/base64.js"></script>
+	<script src="../queryjs/js/kkpager.js"></script>
+	<script  src="../queryjs/js/DetailAPI-1.0.2.js"></script>
+	<script  src="../queryjs/js/Common-1.0.2.js"></script>
+	<script  src="../queryjs/js/DetailControl-1.0.2.js"></script>
+	<script  src="../queryjs/js/tabs.js"></script>
+	<script  src="../queryjs/js/jquery-1.7.2.min.js"></script>
+	<script  src="../queryjs/js/jquery.corner.js"></script>
+	<script  src="../queryjs/js/jquery.roundabout.js"></script>
+	<script  src="../queryjs/js/jquery.roundabout-shapes.js"></script>
+	<script  src="../queryjs/js/index.js"></script>
+	<script  src="../queryjs/js/jquery.min.js"></script>
+	<script  src="../queryjs/js/jquery-rebox.js"></script>
+<!-- 编辑器相关 -->
+    <!-- 国际通用标准 -->
+    <link href="./css/normalize.css/8.0.1/normalize.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <link href="./css/layout.css" rel="stylesheet">
+    <link href="./css/view.css" rel="stylesheet">
+  
+    <script src="./js/custom-elem.js"></script>
+    <!-- 编辑器样式相关 over -->
+
+    <style>
+        .container {
+            display: flex;
+            padding: 10px;
+            background-color: #4474c8;
+            color: #fff;
+        }
+        .container a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container button {
+            color: #000;
+            text-decoration: none;
+        }
+        .container h1 {
+            flex: 1;
+            margin: 0;
+            font-size: 26px;
+        }
+        .container .right-container {
+            width: 200px;
+            text-align: right;
+            margin-right: 10px;
+            line-height: 26px;
+        }
+    </style>
+</head>
+
+<body >
+
+<div class="container"> <h1>添加</h1><div class="right-container">
+
+<!--    <button onclick="updateDetailNews_Action()">发布</button>-->
+    <a href="javascript:addNews_Action()">发布</a>
+</div> </div>
+  <div class="page-container">
+
+
+    <div class="page-right">
+      <!--        标题-->
+      <div style="margin-bottom: 10px;margin-right: 10px">
+          <input type="text" name="" id="id-title" style="width: 100%" >
+      </div>
+
+      <!-- 编辑器 DOM -->
+      <div style="border: 1px solid #ccc;">
+        <div id="editor-toolbar" style="border-bottom: 1px solid #ccc;"></div>
+        <div id="editor-text-area" ></div>
+      </div>
+
+      <!-- 显示内容  display: none; -->
+      <div style="margin-top: 20px;display: none">
+        <textarea id="editor-content-textarea" style="width: 100%; height: 100px; outline: none;" readonly></textarea>
+      </div>
+      <div style="display: none">
+      <div id="editor-content-view" class="editor-content-view"></div>
+    </div>
+    </div>
+  </div>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/@wangeditor/editor@latest/dist/index.min.js"></script> -->
+  <script src="./js/index.js"></script>
+  <script>
+    const E = window.wangEditor
+
+    // 切换语言
+    E.i18nChangeLanguage('zh-CN')
+
+    window.editor = E.createEditor({
+      selector: '#editor-text-area',
+      html: '<p>hello&nbsp;world</p><p><br></p>',
+      config: {
+        placeholder: 'Type here...',
+        MENU_CONF: {
+          uploadImage: {
+            fieldName: 'your-fileName',
+            base64LimitSize: 10 * 1024 * 1024 // 10M 以下插入 base64
+          }
+        },
+        onChange(editor) {
+          const html = editor.getHtml()
+
+          // document.getElementById('editor-content-view').innerHTML = html
+          document.getElementById('editor-content-textarea').value = html
+        }
+      }
+    })
+
+    window.toolbar = E.createToolbar({
+      editor,
+      selector: '#editor-toolbar',
+      config: {}
+    })
+  </script>
+</body>
+
+</html>

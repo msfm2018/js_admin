@@ -1,0 +1,43 @@
+@media screen and ( max-width:1600px ){
+	.banner{ margin-top:92px;}
+	}
+
+@media screen and ( max-width:1440px ){
+	.banner{ margin-top:92px;}
+	.banner .prev{ top:50%;}
+	.banner .next{ top:50%;}
+	.indexPart2 .title{ padding:30px 0 10px;}
+	.indexPart2 .title2{ padding-bottom:20px;}
+	.indexPart3 .title{ padding:20px 0 10px;}
+	.indexPart4 .title{ padding:30px 0 10px;}
+	.indexPart4 .title2{ padding-bottom:25px;}
+	.indexPart5Box{ padding:50px 0;}
+	.footDiv{ height:170px; padding-top:30px;}
+	}
+
+@media screen and ( max-width:1400px ){
+	.banner{ margin-top:80px;}
+	.banner .prev{ top:50%;}
+	.banner .next{ top:50%;}
+	.indexPart2 .title{ padding:0; font-size:30px;}
+	.indexPart2 .title2{ padding-bottom:10px;}
+	.indexPart3 .title{ padding:20px 0 1px; font-size:30px;}
+	.indexPart4{ padding-top:10px;}
+	.indexPart4 .title{ padding:8px 0 2px; font-size:30px;}
+	.indexPart4 .title2{ padding-bottom:20px;}
+	.indexPart5Box{ padding:40px 0;}
+	.footDiv{ height:200px; padding-top:60px;}
+	.indexPart4 .titleLine { width:200px; height:1px; background:#159ada; margin:0 auto; margin-top:0px;}
+	.indexPart3 .tab{height:80px;}
+	.m4_1_1{height: 300px;}
+	.m4_1_a{padding-top: 43px;}
+	.m4_1_b{padding: 20px 40px 25px 50px;}
+	/*.indexPart3 .title2{ text-align:center; font-size:14px; color:#acacacs; font-family: Arial; padding:5px 0 50px 0px;}*/
+	.h1 ul{margin-left: 34%;}
+	.h2 ul{margin-left: 34%;}
+	.h3 ul{margin-left: 43%;}
+	.h4 ul{margin-left: 57%;}
+	.h5 ul{margin-left: 60%;}
+	.h6 ul{margin-left: 43%;}
+	.h7 ul{margin-left: 90.5%;}
+	}
